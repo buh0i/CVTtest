@@ -28,6 +28,7 @@
 html{
      box-sizing: border-box;
      height: 100%;
+     width: 100%;
 }
 *,*::before, *::after{
 	box-sizing: inherit;
@@ -41,19 +42,178 @@ body{
 	font-weight: normal;
 	color: #FFFFFF;
      height: 100%;
+     width: 100%;
 }
 
 /* Стили основного контейнера */
 .wrapper{
      display: flex;
      flex-direction: column;
-     justify-content: center;
+     justify-content: space-between;
      align-items: center;
      min-height: 100%;
      overflow: hidden;
 }
 
 ._container{
-     max-width: 1180px;
+     max-width: none;
      margin: 0  auto;
+     padding: 0 10px;
+}
+
+@media (min-width:767px){
+     ._container{
+          max-width: 992px;
+     }
+}
+
+@media (min-width:992px){
+     ._container{
+          max-width: 1180px;
+     }
+}
+
+.header{
+     position: relative;
+     width: 100%;
+     z-index: 50;
+}
+
+.header__container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     min-height: 40px;
+     padding: 10px 10px;
+}
+
+@media (min-width:767px){
+     .header__container{
+          padding: 15px 10px;
+     }
+}
+
+@media (min-width:992px){
+     .header__container{
+          padding: 32px 10px;
+     }
+}
+
+.header__logo__container{
+
+}
+
+.header__logo__link{
+     text-decoration: none;
+}
+
+.header__logo{
+     padding: 0 12px 0 0;
+}
+
+.header__logo__title{
+     display: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 24px;
+     color: #333333;
+}
+
+@media (min-width:767px){
+     .header__logo__title{
+          display: contents;
+     }
+}
+
+@media (min-width:992px){
+     .header__logo__title{
+          display: contents;
+     }
+}
+
+.header__search__field{
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #333333;
+	font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 16px;
+     line-height: 19px;
+	color: #828282;
+     width: 120px;
+}
+
+@media (min-width:767px){
+     .header__search__field{
+          width: 250px;
+     }
+}
+
+@media (min-width:992px){
+     .header__search__field{
+          width: 320px;
+     }
+}
+
+.header__search__button{
+     background-color: transparent;
+	border: 0;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     color: #E5261E;
+}
+
+.header__search__button:hover{
+     color: #CC221B;
+}
+
+.header__auth{
+     border: 0;
+     background: url(../img/svg/auth-ico.svg) no-repeat;
+     border-radius: 4px;  
+     padding: 20px 20px;
+}
+
+.auth__button__name{
+     display: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     text-align: center;
+     color: #FFFFFF;
+}
+
+@media (min-width:767px){
+     .header__auth{
+          background: #E5261E;
+          padding: 10px 32px;
+     }
+     .header__auth:hover{
+          background: #CC221B;
+     }
+     .auth__button__name{
+          display:contents
+     }
+}
+
+@media (min-width:992px){
+     .header__auth{
+          background: #E5261E;
+          padding: 10px 32px;
+     }
+     .header__auth:hover{
+          background: #CC221B;
+     }
+     .auth__button__name{
+          display:contents
+     }
 }
