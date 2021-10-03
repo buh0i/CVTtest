@@ -72,11 +72,14 @@ body{
      }
 }
 
+/*--------------------------header styles ----------------------------*/
+
 .header{
      position: fixed;
      top: 0;
      width: 100%;
      z-index: 50;
+     background: #FFFFFF;
 }
 
 .header__container{
@@ -198,8 +201,29 @@ body{
      }
 }
 
+/*--------------------------main styles ----------------------------*/
+
+.main__conatiner{
+     position: relative;
+     margin-top: 60px;
+}
+
+@media (min-width:767px){
+     .main__conatiner{
+          margin-top: 69px;
+     }
+}
+
+@media (min-width:992px){
+     .main__conatiner{
+          margin-top: 103px;
+     }
+}
+
+/*--------------------------footer styles ----------------------------*/
+
 .footer{
-     position: absolute;
+     position: relative;
      bottom: 0;
      width: 100%;
      background: #F2F2F2;
