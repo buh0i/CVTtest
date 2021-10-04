@@ -135,17 +135,21 @@ body{
      line-height: 19px;
 	color: #828282;
      width: 120px;
+     margin-right: 12px;
+     padding-bottom: 6px;
 }
 
 @media (min-width:767px){
      .header__search__field{
           width: 250px;
+          margin-right: 22px;
      }
 }
 
 @media (min-width:992px){
      .header__search__field{
           width: 320px;
+          margin-right: 32px;
      }
 }
 
@@ -203,21 +207,215 @@ body{
 
 /*--------------------------main styles ----------------------------*/
 
-.main__conatiner{
+.main__container{
      position: relative;
      margin-top: 60px;
 }
 
 @media (min-width:767px){
-     .main__conatiner{
+     .main__container{
           margin-top: 69px;
      }
 }
 
 @media (min-width:992px){
-     .main__conatiner{
+     .main__container{
           margin-top: 103px;
      }
+}
+
+.main__tab__container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.tab__films{
+     text-decoration: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 28px;
+     line-height: 33px;
+     text-align: right;
+     color: #E5261E;
+     border-bottom: 2px solid #E5261E;
+     margin: 16px 12px 0px 12px;
+     padding-bottom: 6px;
+}
+
+.tab__TVs{
+     text-decoration: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 28px;
+     line-height: 33px;
+     text-align: right;
+     color: #333333;
+     margin: 8px 6px 0px 6px;
+     padding-bottom: 6px;
+}
+
+@media (min-width:767px){
+     
+     .tab__films{
+          margin: 12px 9px 0px 9px;
+     }
+     
+     .tab__films{
+          margin: 16px 12px 0px 12px;
+     }
+}
+
+@media (min-width:992px){
+     
+     .tab__TVs{
+          margin: 12px 9px 0px 9px;
+     }
+
+     .tab__TVs{
+          margin: 16px 12px 0px 12px;
+     }
+}
+
+
+.main__new__title{
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 24px;
+     line-height: 28px;
+     text-align: left;
+     color: #333333;
+     padding: 20px 0 8px 0;
+}
+
+.new__container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 8px 0 16px 0;
+}
+
+.new__item{
+     flex: 1;
+     padding-right: 20px;
+     width: 100%;
+     height: 100%;
+}
+
+.new__item:last-child{
+     padding-right: 0px;
+}
+
+.new__item__img{
+     max-width: 100%;
+     height: 100%;
+}
+
+.new__item__img__container{
+     padding-bottom: 16px;
+}
+
+.new__item__link{
+     text-decoration: none;
+}
+
+.new__item__title{
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 20px;
+     line-height: 24px;
+     color: #333333;
+}
+
+.main__genre{
+     padding-top: 16px;
+}
+
+.main__genre__title{
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 24px;
+     line-height: 28px;
+     text-align: left;
+     color: #333333;
+     padding-bottom: 8px;
+}
+
+.genre__container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+.genre__item{
+     flex: 1 1;
+     margin: 8px 20px 8px 0px;
+     padding: 80px 116px;
+}
+
+.genre__item:last-child{
+     margin: 8px 0px 8px 0px;
+}
+
+.genre__comedy{
+     background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+     box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+     border-radius: 6px;
+}
+
+.genre__drama{
+     background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+     opacity: 0.8;
+     box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+     border-radius: 6px;
+}
+
+.genre__fantastic{
+     background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+     opacity: 0.8;
+     box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+     border-radius: 6px;  
+}
+
+.genre__horror{
+     background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+     opacity: 0.8;
+     box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+     border-radius: 6px;
+}
+
+.genre__item__link{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+}
+
+.genre__item__ico{
+     flex: 1;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 48px;
+     line-height: 57px;
+     text-align: center;
+     color: #FFFFFF;
+}
+
+.genre__item__title{
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 20px;
+     line-height: 24px;
+     text-align: center;
+     color: #FFFFFF;
 }
 
 /*--------------------------footer styles ----------------------------*/
@@ -312,12 +510,12 @@ body{
 
 @media (min-width:767px){
      ._mobile{
-          display: contents;
+          display: inline-block;
      }
 }
 
 @media (min-width:992px){
      ._mobile{
-          display: contents;
+          display: inline-block;
      }
 }
