@@ -296,25 +296,53 @@ body{
      flex-wrap: wrap;
      justify-content: space-between;
      padding: 8px 0 16px 0;
+     max-width: 100%;
+     height: auto;
 }
 
 .new__item{
-     flex: 1;
-     padding-right: 20px;
+     flex: 1 0 30%;
+     overflow: hidden;
+     margin-right: 20px;
      width: 100%;
-     height: 100%;
+     height: auto;
 }
 
-.new__item:last-child{
-     padding-right: 0px;
+.new__item:nth-child(even){
+     margin-right: 0px;
+}
+
+@media (min-width:767px){
+     .new__item{
+          flex: 1 1 0;
+     }
+
+     .new__item:nth-child(2){
+          margin-right: 20px;
+     }
+
+     .new__item:last-child{
+          padding-right: 0px;  
+     }
+}
+
+@media (min-width:992px){
+     .new__item{
+          flex: 1 1 0;
+     }
+
+     .new__item:nth-child(2){
+          margin-right: 20px;
+     }
+     
+     .new__item:last-child{
+          padding-right: 0px;  
+     }
 }
 
 .new__item__img{
      max-width: 100%;
-     height: 100%;
-}
-
-.new__item__img__container{
+     height: auto;
      padding-bottom: 16px;
 }
 
@@ -350,16 +378,38 @@ body{
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+     align-items: center;
+     max-width: 100%;
+     height: auto;
 }
 
 .genre__item{
-     flex: 1 1;
+     flex: 1 0 0;
      margin: 8px 20px 8px 0px;
-     padding: 80px 116px;
 }
 
-.genre__item:last-child{
+.genre__item:nth-child(even){
      margin: 8px 0px 8px 0px;
+}
+
+@media (min-width:767px){
+     .genre__item:last-child{
+          margin: 8px 0px 8px 0px; 
+     }
+
+     .genre__item:nth-child(2){
+          margin: 8px 20px 8px 0px;
+     }
+}
+
+@media (min-width:992px){
+     .genre__item:last-child{
+          margin: 8px 0px 8px 0px;  
+     }
+
+     .genre__item:nth-child(2){
+          margin: 8px 20px 8px 0px;
+     }
 }
 
 .genre__comedy{
@@ -390,15 +440,10 @@ body{
 }
 
 .genre__item__link{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
      text-decoration: none;
 }
 
 .genre__item__ico{
-     flex: 1;
      font-family: Rubik;
      font-style: normal;
      font-weight: normal;
@@ -406,6 +451,7 @@ body{
      line-height: 57px;
      text-align: center;
      color: #FFFFFF;
+     padding: 80px 0 16px 0;
 }
 
 .genre__item__title{
@@ -416,6 +462,7 @@ body{
      line-height: 24px;
      text-align: center;
      color: #FFFFFF;
+     padding: 16px 0 24px 0;
 }
 
 /*--------------------------footer styles ----------------------------*/
