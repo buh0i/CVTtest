@@ -46,6 +46,14 @@ body{
 }
 
 /* Стили основного контейнера */
+#_first__tab{
+     display: block;
+}
+
+#_second__tab{
+     display: none;
+}
+
 ._mobile{
      display: none;
 }
@@ -224,6 +232,8 @@ body{
      }
 }
 
+/*--------------------------tabs styles ----------------------------*/
+
 .main__tab__container{
      display: flex;
      justify-content: center;
@@ -235,50 +245,63 @@ body{
      font-family: Rubik;
      font-style: normal;
      font-weight: 500;
-     font-size: 28px;
+     font-size: 20px;
      line-height: 33px;
-     text-align: right;
-     color: #E5261E;
-     border-bottom: 2px solid #E5261E;
-     margin: 16px 12px 0px 12px;
-     padding-bottom: 6px;
+     text-align: center;
+     color: #333333;
+     margin: 8px 6px 0px 6px;
+     padding-bottom: 2px;
 }
 
-.tab__TVs{
+.tab__channels{
      text-decoration: none;
      font-family: Rubik;
      font-style: normal;
      font-weight: 500;
-     font-size: 28px;
+     font-size: 20px;
      line-height: 33px;
-     text-align: right;
+     text-align: center;
      color: #333333;
      margin: 8px 6px 0px 6px;
-     padding-bottom: 6px;
+     padding-bottom: 2px;
+}
+
+.tab__active{
+     color: #E5261E;
+     border-bottom: 2px solid #E5261E;
 }
 
 @media (min-width:767px){
      
      .tab__films{
           margin: 12px 9px 0px 9px;
+          font-size: 28px;
+          padding-bottom: 6px;
      }
-     
-     .tab__films{
-          margin: 16px 12px 0px 12px;
+
+     .tab__channels{
+          margin: 12px 9px 0px 9px;
+          font-size: 28px;
+          padding-bottom: 6px;
      }
 }
 
 @media (min-width:992px){
-     
-     .tab__TVs{
-          margin: 12px 9px 0px 9px;
+    
+     .tab__films{
+          margin: 16px 12px 0px 12px;
+          font-size: 28px;
+          padding-bottom: 6px;
      }
 
-     .tab__TVs{
+     .tab__channels{
           margin: 16px 12px 0px 12px;
+          font-size: 28px;
+          padding-bottom: 6px;
      }
 }
 
+/*--------------------------main__new styles ----------------------------*/
 
 .main__new__title{
      font-family: Rubik;
@@ -358,6 +381,8 @@ body{
      line-height: 24px;
      color: #333333;
 }
+
+/*--------------------------main__genre styles ----------------------------*/
 
 .main__genre{
      padding-top: 16px;
@@ -464,7 +489,142 @@ body{
      color: #FFFFFF;
      padding: 16px 0 24px 0;
 }
+/*--------------------------main__channels styles ----------------------------*/
 
+.main__channels{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: space-between;
+     margin: 15px 0 14px 0;
+}
+
+.channels__item{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     background: #F2F2F2;
+     border-radius: 8px;
+     margin-bottom: 16px;
+     overflow: hidden;
+}
+
+.channels__item__img{
+     width: 30%;
+     height: 30%;
+     max-width:100%;
+     max-height: 100%;
+     padding: 5px 5px;
+}
+
+.channels__item__timetable{
+     padding: 5px 5px;
+}
+
+.timetable__container{
+     display: flex;
+     justify-content: flex-start;
+     flex-wrap: nowrap;
+     max-height: 162px;
+}
+
+.timetable__title{
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 24px;
+     color: #333333;
+     padding: 21px 0 17px 0;
+}
+
+.timetable__time{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding-right: 16px;
+}
+
+.timetable__time__item{
+     flex: 0 1 33%;
+     text-decoration: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 16px;
+     line-height: 19px;
+     color: #333333;
+     margin-bottom: 12px;
+}
+
+.timetable__name{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding-right: 16px;
+
+}
+
+.timetable__name__item{
+     flex: 0 1 33%;
+     text-decoration: none;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 16px;
+     line-height: 19px;
+     color: #333333;
+     margin-bottom: 10px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: clip;
+}
+
+.timetable__time__item:first-of-type{
+     color: #E5261E;
+}
+
+.timetable__name__item:first-of-type{
+     color: #E5261E;
+}
+
+@media (min-width:767px){
+     .main__channels{
+          margin: 20px 0 28px 0;
+     }
+
+     .channels__item__timetable{
+          padding: 0;
+     }
+
+     .channels__item__img{
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          padding: 29px 75px;
+     }
+}
+
+@media (min-width:992px){
+     .main__channels{
+          margin: 27px 0 56px 0;
+     }
+
+     .channels__item__timetable{
+          padding: 0;
+     }
+
+     .channels__item__img{
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          padding: 49px 175px;
+     }
+}
 /*--------------------------footer styles ----------------------------*/
 
 .footer{
