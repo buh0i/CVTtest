@@ -57,7 +57,14 @@ body{
 ._mobile{
      display: none;
 }
+
+._timetable__open{
+     display: flex;
+}
+
 .wrapper{
+     display: flex;
+     flex-direction: column;
      min-height: 100%;
      overflow: hidden;
 }
@@ -66,6 +73,10 @@ body{
      max-width: none;
      margin: 0  auto;
      padding: 0 10px;
+}
+
+.main{
+     flex-grow: 1;
 }
 
 @media (min-width:767px){
@@ -386,6 +397,7 @@ body{
 
 .main__genre{
      padding-top: 16px;
+     margin-bottom: 72px;
 }
 
 .main__genre__title{
@@ -522,7 +534,7 @@ body{
      height: 30%;
      max-width:100%;
      max-height: 100%;
-     padding: 5px 5px;
+     padding: 5px 25px;
 }
 
 .channels__item__timetable{
@@ -530,10 +542,9 @@ body{
 }
 
 .timetable__container{
-     display: flex;
+     display: none;
      justify-content: flex-start;
      flex-wrap: nowrap;
-     max-height: 162px;
 }
 
 .timetable__title{
@@ -614,6 +625,10 @@ body{
           max-height: 100%;
           padding: 29px 75px;
      }
+
+     .timetable__container{
+          display: flex;
+     }
 }
 
 @media (min-width:992px){
@@ -632,14 +647,17 @@ body{
           max-height: 100%;
           padding: 49px 175px;
      }
+
+     .timetable__container{
+          display: flex;
+     }
 }
 /*--------------------------footer styles ----------------------------*/
 
 .footer{
-     position: relative;
-     bottom: 0;
      width: 100%;
      background: #F2F2F2;
+     flex-shrink: 0;
 }
 
 .footer__container{
