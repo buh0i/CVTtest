@@ -9,6 +9,20 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="modal__wrapper">
+				<div class="modal__shade"></div>
+				<div class="modal__item">
+					<div class="modal__item__title__wrapper">
+						<h2 class="modal__item__title">Вход</h2>
+					</div>
+					<form action="" class="modal__item__form">
+						<input type="text" placeholder="Логин" id="modal__login" class="modal__item__input">
+						<input type="password" placeholder="Пароль" id="modal__password" class="modal__item__input">
+						<p class="modal__item__checkbox__name"><input type="checkbox" class="modal__item__checkbox">Запомнить</p>
+						<input type="button" value="Войти" class="modal__item__button">
+					</form>
+				</div>
+			</div>
 			<header class="header" name="top">
 				<div class="header__container _container">
 					<div class="header__logo__container">
@@ -28,6 +42,14 @@
 					<div class="header__auth__container">
 						<button class="header__auth"><span class="auth__button__name _mobile">Войти</span></button>
 					</div>
+					<div class="header__profile__container">
+						<div class="header__profile__ico__container"></div>
+						<div class="profile__modal__shade"></div>
+						<div class="header__profile__modal__container">
+							<div class="header__profile">Константин К.</div>
+							<input type="button" value="Выйти" class="header__exit__button">
+						</div>
+					</div>
 				</div>
 			</header>
 			<main class="main">
@@ -45,36 +67,64 @@
 							<h3 class="main__new__title">🔥 Новинки</h3>
 							<div class="new__container">
 								<div class="new__item">
-									<a href="#!" class="new__item__link">
-										<img src="./img/movie_1.jpg" alt="Мульт в кино. Выпуск №103. Некогда грустить!" class="new__item__img">
-									</a>
-									<a href="#!" class="new__item__link">
-										<span class="new__item__title">Мульт в кино. Выпуск №103. Некогда грустить!</span>
-									</a>
+									<div class="new__item__body">
+										<div class="new__item__body__desc">
+											<p class="new__item__desc">Описание 1</p>
+										</div>
+										<a href="#!" class="new__item__link">
+											<img src="./img/movie_1.jpg" alt="Мульт в кино. Выпуск №103. Некогда грустить!" class="new__item__img">
+										</a>
+									</div>
+									<div class="new__item__title">
+										<a href="#!" class="new__item__link">
+											<span class="new__item__title">Мульт в кино. Выпуск №103. Некогда грустить!</span>
+										</a>
+									</div>
 								</div>
 								<div class="new__item">
-									<a href="#!" class="new__item__link">
-										<img src="./img/movie_2.jpg" alt="Новый Бэтмен" class="new__item__img">
-									</a>
-									<a href="#!" class="new__item__link">
-										<span class="new__item__title">Новый Бэтмен</span>
-									</a>
+									<div class="new__item__body">
+										<div class="new__item__body__desc">
+											<p class="new__item__desc">Описание 2</p>
+										</div>
+										<a href="#!" class="new__item__link">
+											<img src="./img/movie_2.jpg" alt="Новый Бэтмен" class="new__item__img">
+										</a>
+									</div>
+									<div class="new__item__title">
+										<a href="#!" class="new__item__link">
+											<span class="new__item__title">Новый Бэтмен</span>
+										</a>
+									</div>
 								</div>
 								<div class="new__item">
-									<a href="#!" class="new__item__link">
-										<img src="./img/movie_3.jpg" alt="Однажды... в Голливуде" class="new__item__img">
-									</a>
-									<a href="#!" class="new__item__link">
-										<span class="new__item__title">Однажды... в Голливуде</span>
-									</a>
+									<div class="new__item__body">
+										<div class="new__item__body__desc">
+											<p class="new__item__desc">Описание 3</p>
+										</div>
+										<a href="#!" class="new__item__link">
+											<img src="./img/movie_3.jpg" alt="Однажды... в Голливуде" class="new__item__img">
+										</a>
+									</div>
+									<div class="new__item__title">
+										<a href="#!" class="new__item__link">
+											<span class="new__item__title">Однажды... в Голливуде</span>
+										</a>
+									</div>
 								</div>
 								<div class="new__item">
-									<a href="#!" class="new__item__link">
-										<img src="./img/movie_4.jpg" alt="Стриптизёрши" class="new__item__img">
-									</a>
-									<a href="#!" class="new__item__link">
-										<span class="new__item__title">Стриптизёрши</span>
-									</a>
+									<div class="new__item__body">
+										<div class="new__item__body__desc">
+											<p class="new__item__desc">Описание 4</p>
+										</div>
+										<a href="#!" class="new__item__link">
+											<img src="./img/movie_4.jpg" alt="Стриптизёрши" class="new__item__img">
+										</a>
+									</div>
+									<div class="new__item__title">
+										<a href="#!" class="new__item__link">
+											<span class="new__item__title">Стриптизёрши</span>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -111,10 +161,12 @@
 					<div id="_second__tab">
 						<div class="main__channels">
 							<div class="channels__item">
-								<img src="./img/svg/logo_1.svg" alt="Первый канал" class="channels__item__img">
+								<div class="channels__img_container">
+									<img src="./img/svg/logo_1.svg" alt="Первый канал" class="channels__item__img">
+								</div>
 								<div class="channels__item__timetable">
 									<p class="timetable__title">Первый канал</p>
-									<div class="timetable__container">
+									<div class="timetable__container ">
 										<ul class="timetable__time">
 											<li class="timetable__time__item">
 												13:00
@@ -141,10 +193,12 @@
 								</div>
 							</div>
 							<div class="channels__item">
-								<img src="./img/svg/logo_2.svg" alt="2x2" class="channels__item__img">
+								<div class="channels__img_container">
+									<img src="./img/svg/logo_2.svg" alt="2x2" class="channels__item__img">
+								</div>
 								<div class="channels__item__timetable">
 									<p class="timetable__title">2x2</p>
-									<div class="timetable__container">
+									<div class="timetable__container ">
 										<ul class="timetable__time">
 											<li class="timetable__time__item">
 												13:00
@@ -171,10 +225,12 @@
 								</div>
 							</div>
 							<div class="channels__item">
-								<img src="./img/svg/logo_3.svg" alt="РБК" class="channels__item__img">
+								<div class="channels__img_container">
+									<img src="./img/svg/logo_3.svg" alt="РБК" class="channels__item__img">
+								</div>
 								<div class="channels__item__timetable">
 									<p class="timetable__title">РБК</p>
-									<div class="timetable__container">
+									<div class="timetable__container ">
 										<ul class="timetable__time">
 											<li class="timetable__time__item">
 												13:00
@@ -201,14 +257,16 @@
 								</div>
 							</div>
 							<div class="channels__item">
-								<img src="./img/svg/logo_4.svg" alt="AMEDIA PREMIUM" class="channels__item__img">
+								<div class="channels__img_container">
+									<img src="./img/svg/logo_4.svg" alt="AMEDIA PREMIUM" class="channels__item__img">
+								</div>
 								<div class="channels__item__timetable">
 									<p class="timetable__title">AMEDIA PREMIUM</p>
-									<div class="timetable__container">
+									<div class="timetable__container ">
 										<ul class="timetable__time">
 											<li class="timetable__time__item">
 												13:00
-											</li>
+											</li>	
 											<li class="timetable__time__item">
 												14:00
 											</li>
