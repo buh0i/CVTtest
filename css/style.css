@@ -506,6 +506,7 @@ body{
      .header__profile{
           margin-bottom: 0;
      }
+<<<<<<< HEAD
 }
 
 .profile__name__input{
@@ -528,6 +529,8 @@ body{
      .profile__name__input{
           margin-bottom: 0px;
      }
+=======
+>>>>>>> 7e4b8f65cae8a611e5e77314b3a883344599933f
 }
 
 /*--------------------------main styles ----------------------------*/
