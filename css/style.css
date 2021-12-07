@@ -273,7 +273,7 @@ body{
 
 .header__container{
      display: flex;
-     flex-wrap: nowrap;
+     flex-wrap: wrap;
      justify-content: space-between;
      align-items: center;
      min-height: 40px;
@@ -506,7 +506,6 @@ body{
      .header__profile{
           margin-bottom: 0;
      }
-<<<<<<< HEAD
 }
 
 .profile__name__input{
@@ -514,23 +513,8 @@ body{
      background-color: transparent;
 	border: 0;
 	border-bottom: 1px solid #333333;
-     margin-bottom: 50px;
      margin-right: 10px;
      width: 150px;
-}
-
-@media (min-width:767px){
-     .profile__name__input{
-          margin-bottom: 0px;
-     }
-}
-
-@media (min-width:992px){
-     .profile__name__input{
-          margin-bottom: 0px;
-     }
-=======
->>>>>>> 7e4b8f65cae8a611e5e77314b3a883344599933f
 }
 
 /*--------------------------main styles ----------------------------*/

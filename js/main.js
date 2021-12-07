@@ -15,11 +15,8 @@
     let _profile__ico = document.querySelector('.header__profile__ico__container');
     let _profile__modal__container = document.querySelector('.header__profile__modal__container');
     let _profile__modal__shade = document.querySelector('.profile__modal__shade');
-<<<<<<< HEAD
     let _profile__name = document.querySelector('.header__profile');
     let _profile__name__input = document.querySelector('.profile__name__input');
-=======
->>>>>>> 7e4b8f65cae8a611e5e77314b3a883344599933f
 
     //switch tabs
 
@@ -115,7 +112,6 @@
     };
 
     mobile_profile_menu(_profile__ico, _profile__modal__container, _profile__modal__shade);
-<<<<<<< HEAD
 
     //change profile name
 
@@ -124,6 +120,7 @@
         profile_name_input.style.display = 'block';
         profile_name.style.display = 'none';
         profile_name_input.value = profile_name.innerText;
+        console.log('aaaa')
       });
       profile_name_input.addEventListener('input', () => {
         profile_name.innerText = profile_name_input.value;
@@ -131,10 +128,7 @@
       profile_name_input.addEventListener('blur', () => {
         profile_name.style.display = 'block';
         profile_name_input.style.display = 'none';
-        console.log('AAAAAAAAAAAAAAa');
       });
     };
     change_profile_name(_profile__name, _profile__name__input);
-=======
->>>>>>> 7e4b8f65cae8a611e5e77314b3a883344599933f
 }());
