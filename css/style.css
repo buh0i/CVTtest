@@ -273,7 +273,7 @@ body{
 
 .header__container{
      display: flex;
-     flex-wrap: wrap;
+     flex-wrap: nowrap;
      justify-content: space-between;
      align-items: center;
      min-height: 40px;
@@ -293,7 +293,7 @@ body{
 }
 
 .header__logo__container{
-
+     flex: 0 1 auto;
 }
 
 .header__logo__link{
@@ -311,6 +311,10 @@ body{
      font-size: 20px;
      line-height: 24px;
      color: #333333;
+}
+
+.header__search__container{
+     flex: 0 1 auto;
 }
 
 .header__search__field{
@@ -333,12 +337,24 @@ body{
           width: 250px;
           margin-right: 22px;
      }
+     .header__search__container{
+          flex: 0 1 55%;
+     }
+     .header__logo__container{
+          flex: 0 1 30%;
+     }
 }
 
 @media (min-width:992px){
      .header__search__field{
           width: 320px;
           margin-right: 32px;
+     }
+     .header__search__container{
+          flex: 0 1 50%;
+     }
+     .header__logo__container{
+          flex: 0 1 34%;
      }
 }
 
@@ -358,7 +374,9 @@ body{
 }
 
 .header__auth__container{
-     display: block;
+     flex: 0 1 auto;
+     display: flex;
+     justify-content: flex-end;
 }
 
 .header__auth{
@@ -380,16 +398,22 @@ body{
 
 .header__profile__container{
      display: none;
+     flex: 0 1 auto;
+     flex-wrap: nowrap;
+     justify-content: flex-end;
+     height: 39px;
+     overflow: hidden;
 }
 
 .header__profile__ico__container{
      display: block;
      background: url(../img/svg/login-ico.svg) no-repeat;
-     padding: 20px
+     padding: 19px;
 }
 
 .header__profile__modal__container{
      display: none;
+     flex-wrap: nowrap;
      flex-direction: column;
      justify-content: center;
      align-items: center;
@@ -400,10 +424,10 @@ body{
      left: 0;
      margin: 30% 15%;
      background-color: white;
-     width: 75%;
-     height: 75%;
      border-radius: 8px;
      z-index: 99999;
+     white-space: nowrap;
+     overflow: hidden;
 }
 
 .profile__modal__shade{
@@ -419,15 +443,8 @@ body{
 }
 
 .header__profile{
-     font-family: Rubik;
-     font-style: normal;
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 19px;
-     text-align: center;
-     color: #333333;
-     margin-right: 16px;
-     margin-bottom: 50px;
+     padding-right: 0px;  
+     width: 150px;
 }
 
 .header__exit__button{
@@ -442,79 +459,116 @@ body{
 	border: 0;
      padding: 0;
      margin: 0;
+     padding-left: 0px;
 }
 
 .header__exit__button:hover{
      color: #CC221B;
 }
 
-@media (min-width:767px){
-     .header__auth{
-          background: #E5261E;
-          padding: 10px 32px;
-     }
-     .header__auth:hover{
-          background: #CC221B;
-     }
-     .header__profile__ico__container{
-          display: none;
-     }
-     .header__profile__modal__container{
-          display: flex;
-          position: relative;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: center;
-          margin: 0;
-          background-color: transparent;
-          width: auto;
-          height: auto;
-     }
-     .profile__modal__shade{
-          display: none;
-     }
-     .header__profile{
-          margin-bottom: 0;
-     }
-}
-
-@media (min-width:992px){
-     .header__auth{
-          background: #E5261E;
-          padding: 10px 32px;
-     }
-     .header__auth:hover{
-          background: #CC221B;
-     }
-     .header__profile__ico__container{
-          display: none;
-     }
-     .header__profile__modal__container{
-          display: flex;
-          position: relative;
-          flex-direction: row;
-          justify-content: flex-end;
-          align-items: center;
-          margin: 0;
-          background-color: transparent;
-          width: auto;
-          height: auto;
-     }
-     .profile__modal__shade{
-          display: none;
-     }
-     .header__profile{
-          margin-bottom: 0;
-     }
-}
-
 .profile__name__input{
      display: none;
      background-color: transparent;
 	border: 0;
-	border-bottom: 1px solid #333333;
-     margin-right: 10px;
+     padding-right: 0px;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     color: #333333; 
      width: 150px;
+}
+
+.profile__name__container{
+     display: flex;
+     justify-content: space-between;
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     text-align: center;
+     color: #333333;
+     margin-bottom: 50px;
+     overflow: hidden;
+}
+
+@media (min-width:767px){
+     .header__auth__container{
+          flex: 0 1 20%;
+     }
+     .header__auth{
+          background: #E5261E;
+          padding: 10px 32px;
+     }
+     .header__auth:hover{
+          background: #CC221B;
+     }
+     .header__profile__container{
+          flex: 0 1 20%;
+          overflow: hidden;
+     }
+     .header__profile__ico__container{
+          display: none;
+     }
+     .header__profile__modal__container{
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          margin: 0;
+          background-color: transparent;
+     }
+     .profile__modal__shade{
+          display: none;
+     }
+     .profile__name__container{
+          flex: 0 1 70%;
+          margin-bottom: 0;
+     }
+     .header__exit__button{
+          padding-left: 16px;
+     }
+}
+
+@media (min-width:992px){
+     .header__auth__container{
+          flex: 0 1 20%;
+     }
+     .header__auth{
+          background: #E5261E;
+          padding: 10px 32px;
+     }
+     .header__auth:hover{
+          background: #CC221B;
+     }
+     .header__profile__container{
+          flex: 0 1 20%;
+     }
+     .header__profile__ico__container{
+          display: none;
+     }
+     .header__profile__modal__container{
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
+          margin: 0;
+          background-color: transparent;
+     }
+     .profile__modal__shade{
+          display: none;
+     }
+     .profile__name__container{
+          flex: 0 1 70%;
+          margin-bottom: 0;
+     }
+     .header__exit__button{
+          padding-left: 16px;
+     }
 }
 
 /*--------------------------main styles ----------------------------*/

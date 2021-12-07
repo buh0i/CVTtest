@@ -87,11 +87,11 @@
         if (login==='Kostya' && password==='1'){
           modal_menu.style.display = 'none';
           enter_button.style.display = 'none';
-          header_profile_container.style.display = 'block'; 
+          header_profile_container.style.display = 'flex'; 
         }
       });
       header_exit_button.addEventListener('click', () => {
-        enter_button.style.display = 'block';
+        enter_button.style.display = 'flex';
         header_profile_container.style.display = 'none';
       })
     };
@@ -121,6 +121,7 @@
         profile_name.style.display = 'none';
         profile_name_input.value = profile_name.innerText;
         console.log('aaaa')
+        profile_name_input.focus();
       });
       profile_name_input.addEventListener('input', () => {
         profile_name.innerText = profile_name_input.value;
